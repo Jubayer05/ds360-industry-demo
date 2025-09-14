@@ -1,5 +1,5 @@
 "use client";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, Variants } from "framer-motion";
 import React, { useRef } from "react";
 import CountUp from "react-countup";
 
@@ -15,7 +15,7 @@ export const StatsSection: React.FC = () => {
     { number: 68, label: "NPS", suffix: "" },
   ];
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0, y: 50 },
     visible: {
       opacity: 1,
@@ -27,7 +27,7 @@ export const StatsSection: React.FC = () => {
     },
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 30, scale: 0.8 },
     visible: {
       opacity: 1,

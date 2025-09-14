@@ -1,12 +1,12 @@
 import { Button as AntButton, ButtonProps as AntButtonProps } from "antd";
 import React from "react";
 
-interface ButtonProps extends AntButtonProps {
+interface CustomButtonProps extends Omit<AntButtonProps, "variant" | "size"> {
   variant?: "primary" | "secondary" | "outline" | "ghost";
   size?: "small" | "medium" | "large";
 }
 
-export const Button: React.FC<ButtonProps> = ({
+export const Button: React.FC<CustomButtonProps> = ({
   variant = "primary",
   size = "medium",
   className = "",
